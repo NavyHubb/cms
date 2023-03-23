@@ -4,42 +4,65 @@ Content-Type: application/json
 
 {
   "birth": "1997-01-23",
-  "email": "seongjae972@gmail.com",
+  "email": "sj8504123@naver.com",
   "name": "Green",
   "password": "1111",
   "phone": "010-4916-8503"
 }
 
+### 이메일 인증 (고객)
+GET http://localhost:8080/signUp/customer/verify?email={메일주소}}&code={코드}
+Accept: application/json
+
 ### 로그인 (고객)
 POST http://localhost:8080/signIn/customer
 Content-Type: application/json
-X-AUTH-TOKEN:
 
 {
-  "email": "seongjae972@gmail.com",
+  "email": "sj8504123@naver.com",
   "password": "1111"
 }
 
 ### 회원 정보 조회 (고객)
 GET http://localhost:8080/customer/getInfo
 Content-Type: application/json
-X-AUTH-TOKEN:
+X-AUTH-TOKEN: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ5NXEvaEs1bkwxbUdtVzZocnk2WFByQXphUVBGVHFES2dGRmhrcDdwb1owPSIsImp0aSI6IkNtWUR2NU1LNVlVeWlrOEtHTkR3b3c9PSIsInJvbGVzIjoiQ1VTVE9NRVIiLCJpYXQiOjE2Nzk1NzUwOTcsImV4cCI6MTY3OTY2MTQ5N30.NX0dLBypcUommMF8rkREULr_NnFFyvdOC7ckKfsePEc
 
 ### 잔액 변경 (고객)
 POST http://localhost:8080/customer/balance
 Content-Type: application/json
-X-AUTH-TOKEN:
+X-AUTH-TOKEN: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ5NXEvaEs1bkwxbUdtVzZocnk2WFByQXphUVBGVHFES2dGRmhrcDdwb1owPSIsImp0aSI6IkNtWUR2NU1LNVlVeWlrOEtHTkR3b3c9PSIsInJvbGVzIjoiQ1VTVE9NRVIiLCJpYXQiOjE2Nzk1NzUwOTcsImV4cCI6MTY3OTY2MTQ5N30.NX0dLBypcUommMF8rkREULr_NnFFyvdOC7ckKfsePEc
 
 {
   "from": "string",
   "message": "string",
-  "money": 50000 
+  "money": 50000
 }
 
 ################################
 
 ### 회원가입 (셀러)
+POST http://localhost:8080/signUp/seller
+Content-Type: application/json
+
+{
+  "birth": "1997-01-23",
+  "email": "sj8504123@naver.com",
+  "name": "Gang",
+  "password": "1111",
+  "phone": "010-1111-2222"
+}
 
 ### 로그인 (셀러)
+POST http://localhost:8080/signIn/seller
+Content-Type: application/json
+
+{
+  "email": "sj8504123@naver.com",
+  "password": "1111"
+}
 
 ### 회원 정보 조회 (셀러)
+GET http://localhost:8080/seller/getInfo
+Content-Type: application/json
+X-AUTH-TOKEN: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ5NXEvaEs1bkwxbUdtVzZocnk2WFByQXphUVBGVHFES2dGRmhrcDdwb1owPSIsImp0aSI6IkNtWUR2NU1LNVlVeWlrOEtHTkR3b3c9PSIsInJvbGVzIjoiU0VMTEVSIiwiaWF0IjoxNjc5NTc1MTg5LCJleHAiOjE2Nzk2NjE1ODl9.OxSZkWEVHY0D8o0IfhqegldNVPa4q3qWLaCDqZtKCbc
