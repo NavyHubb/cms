@@ -26,7 +26,7 @@ public class SwaggerConfig implements WebMvcConfigurer {
 
     private static ApiInfo apiInfo() {
         return new ApiInfoBuilder()
-                .title("전자 상거래 서비스")
+                .title("전자 상거래 서비스ㅋㅋㅋㅋㅋㅋㅋㅋㅋ")
                 .description("판매자와 구매자를 잇는 E-Commerce 플랫폼")
                 .version("1.0")
                 .build();
