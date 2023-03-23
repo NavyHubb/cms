@@ -1,0 +1,45 @@
+### 회원가입 (고객)
+POST http://localhost:8080/signUp/customer
+Content-Type: application/json
+
+{
+  "birth": "1997-01-23",
+  "email": "seongjae972@gmail.com",
+  "name": "Green",
+  "password": "1111",
+  "phone": "010-4916-8503"
+}
+
+### 로그인 (고객)
+POST http://localhost:8080/signIn/customer
+Content-Type: application/json
+X-AUTH-TOKEN:
+
+{
+  "email": "seongjae972@gmail.com",
+  "password": "1111"
+}
+
+### 회원 정보 조회 (고객)
+GET http://localhost:8080/customer/getInfo
+Content-Type: application/json
+X-AUTH-TOKEN:
+
+### 잔액 변경 (고객)
+POST http://localhost:8080/customer/balance
+Content-Type: application/json
+X-AUTH-TOKEN:
+
+{
+  "from": "string",
+  "message": "string",
+  "money": 50000 
+}
+
+################################
+
+### 회원가입 (셀러)
+
+### 로그인 (셀러)
+
+### 회원 정보 조회 (셀러)
