@@ -31,8 +31,8 @@ public class Customer extends BaseEntity {
     private String verificationCode;
     private boolean verify;
 
-    @Column(columnDefinition = "int default 0")
-    private Integer balance;
+//    @Column(columnDefinition = "int default 0")
+    private int balance;
 
 
     public static Customer from(SignUpForm form) {
@@ -43,6 +43,7 @@ public class Customer extends BaseEntity {
                 .birth(form.getBirth())
                 .phone(form.getPhone())
                 .verify(false)
+                .balance(0)
                 .build();
     }
 }
