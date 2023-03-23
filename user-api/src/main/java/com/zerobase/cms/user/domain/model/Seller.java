@@ -4,7 +4,10 @@ import com.zerobase.cms.user.domain.SignUpForm;
 import lombok.*;
 import org.hibernate.envers.AuditOverride;
 
-import javax.persistence.*;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 
@@ -15,7 +18,7 @@ import java.time.LocalDateTime;
 @NoArgsConstructor
 @AllArgsConstructor
 @AuditOverride(forClass = BaseEntity.class)
-public class Customer extends BaseEntity {
+public class Seller extends BaseEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -29,14 +32,10 @@ public class Customer extends BaseEntity {
 
     private LocalDateTime verifyExpiredAt;
     private String verificationCode;
-    private boolean verify;
+    private boolean verify = false;
 
-    @Column(columnDefinition = "int default 0")
-    private Integer balance;
-
-
-    public static Customer from(SignUpForm form) {
-        return Customer.builder()
+    public static Seller from(SignUpForm form) {
+        return Seller.builder()
                 .email(form.getEmail())
                 .name(form.getName())
                 .password(form.getPassword())
