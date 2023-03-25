@@ -1,0 +1,28 @@
+### 상품 추가
+POST http://localhost:8082/seller/product
+Content-Type: application/json
+X-AUTH-TOKEN: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ5NXEvaEs1bkwxbUdtVzZocnk2WFByQXphUVBGVHFES2dGRmhrcDdwb1owPSIsImp0aSI6IkNtWUR2NU1LNVlVeWlrOEtHTkR3b3c9PSIsInJvbGVzIjoiU0VMTEVSIiwiaWF0IjoxNjc5NzI4NzE4LCJleHAiOjE2Nzk4MTUxMTh9.q5IQnJ-FPZQ_AVmqmdb60vEZvq3xhz5GLUXVenwWxhQ
+
+{
+  "description": "string",
+  "items": [
+    {
+      "count": 1,
+      "name": "string",
+      "price": 5000
+    }
+  ],
+  "name": "Nike"
+}
+
+### 상품 아이템 추가
+POST http://localhost:8082/seller/product/item
+Content-Type: application/json
+X-AUTH-TOKEN: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ5NXEvaEs1bkwxbUdtVzZocnk2WFByQXphUVBGVHFES2dGRmhrcDdwb1owPSIsImp0aSI6IkNtWUR2NU1LNVlVeWlrOEtHTkR3b3c9PSIsInJvbGVzIjoiU0VMTEVSIiwiaWF0IjoxNjc5NzI4NzE4LCJleHAiOjE2Nzk4MTUxMTh9.q5IQnJ-FPZQ_AVmqmdb60vEZvq3xhz5GLUXVenwWxhQ
+
+{
+  "productId": 6,
+  "count": 1,
+  "name": "item1",
+  "price": 5000
+}
