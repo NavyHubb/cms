@@ -6,7 +6,7 @@ Content-Type: application/json
   "birth": "1997-01-23",
   "email": "sj8504123@naver.com",
   "name": "Green",
-  "password": "1111",
+  "password": "string",
   "phone": "010-4916-8503"
 }
 
@@ -20,7 +20,7 @@ Content-Type: application/json
 
 {
   "email": "sj8504123@naver.com",
-  "password": "1111"
+  "password": "string"
 }
 
 ### 회원 정보 조회 (고객)
@@ -49,9 +49,13 @@ Content-Type: application/json
   "birth": "1997-01-23",
   "email": "sj8504123@naver.com",
   "name": "Gang",
-  "password": "1111",
+  "password": "string",
   "phone": "010-1111-2222"
 }
+
+### 이메일 인증 (셀러)
+GET http://localhost:8080/signUp/seller/verify?email={메일주소}}&code={코드}
+Accept: application/json
 
 ### 로그인 (셀러)
 POST http://localhost:8080/signIn/seller
@@ -59,7 +63,7 @@ Content-Type: application/json
 
 {
   "email": "sj8504123@naver.com",
-  "password": "1111"
+  "password": "string"
 }
 
 ### 회원 정보 조회 (셀러)
