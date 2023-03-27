@@ -4,7 +4,7 @@ Content-Type: application/json
 X-AUTH-TOKEN: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ5NXEvaEs1bkwxbUdtVzZocnk2WFByQXphUVBGVHFES2dGRmhrcDdwb1owPSIsImp0aSI6IkNtWUR2NU1LNVlVeWlrOEtHTkR3b3c9PSIsInJvbGVzIjoiU0VMTEVSIiwiaWF0IjoxNjc5ODgyODU5LCJleHAiOjE2Nzk5NjkyNTl9.ow85cwUTko1FS5w18qNMwmZPAaWO0H1tf1aeePj286s
 
 {
-  "description": "string",
+  "description": "이걸 누가 사냐",
   "items": [
     {
       "count": 1,
@@ -66,5 +66,15 @@ X-AUTH-TOKEN: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ5NXEvaEs1bkwxbUdtVzZocnk2WFByQXphU
 
 ### 상품 아이템 삭제
 DELETE http://localhost:8082/seller/product/item?id=2
+Content-Type: application/json
+X-AUTH-TOKEN: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ5NXEvaEs1bkwxbUdtVzZocnk2WFByQXphUVBGVHFES2dGRmhrcDdwb1owPSIsImp0aSI6IkNtWUR2NU1LNVlVeWlrOEtHTkR3b3c9PSIsInJvbGVzIjoiU0VMTEVSIiwiaWF0IjoxNjc5ODgyODU5LCJleHAiOjE2Nzk5NjkyNTl9.ow85cwUTko1FS5w18qNMwmZPAaWO0H1tf1aeePj286s
+
+### 상품 검색
+GET http://localhost:8082/search/product?name=Nike
+Content-Type: application/json
+X-AUTH-TOKEN: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ5NXEvaEs1bkwxbUdtVzZocnk2WFByQXphUVBGVHFES2dGRmhrcDdwb1owPSIsImp0aSI6IkNtWUR2NU1LNVlVeWlrOEtHTkR3b3c9PSIsInJvbGVzIjoiU0VMTEVSIiwiaWF0IjoxNjc5ODgyODU5LCJleHAiOjE2Nzk5NjkyNTl9.ow85cwUTko1FS5w18qNMwmZPAaWO0H1tf1aeePj286s
+
+### 상품 상세 조회
+GET http://localhost:8082/search/product/detail?productId=3
 Content-Type: application/json
 X-AUTH-TOKEN: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ5NXEvaEs1bkwxbUdtVzZocnk2WFByQXphUVBGVHFES2dGRmhrcDdwb1owPSIsImp0aSI6IkNtWUR2NU1LNVlVeWlrOEtHTkR3b3c9PSIsInJvbGVzIjoiU0VMTEVSIiwiaWF0IjoxNjc5ODgyODU5LCJleHAiOjE2Nzk5NjkyNTl9.ow85cwUTko1FS5w18qNMwmZPAaWO0H1tf1aeePj286s
