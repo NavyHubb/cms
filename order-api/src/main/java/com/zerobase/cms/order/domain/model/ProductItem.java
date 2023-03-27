@@ -30,7 +30,9 @@ public class ProductItem extends BaseEntity {
 
     private Integer count;
 
-    @ManyToOne(cascade = CascadeType.ALL)
+    // Many 쪽에 Cascade.All 걸어놓으면 Many쪽 객체에 대한 영속성을 변경할 떄 One 쪽에도 함께 영향이 감
+    // Ex) productItem을 삭제하는 경우 이 productItem과 연관돼있는 product까지 같이 삭제 됨
+    @ManyToOne
     @JoinColumn(name = "product_id")
     private Product product;
 

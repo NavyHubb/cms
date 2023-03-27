@@ -1,11 +1,9 @@
 package com.zerobase.cms.order.controller;
 
-import com.zerobase.cms.order.domain.model.ProductItem;
 import com.zerobase.cms.order.domain.product.*;
 import com.zerobase.cms.order.service.ProductItemService;
 import com.zerobase.cms.order.service.ProductService;
 import com.zerobase.domain.config.JwtAuthenticationProvider;
-import io.jsonwebtoken.Jwt;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -45,5 +43,19 @@ public class SellerProductController {
                                                      @RequestBody UpdateProductItemForm form) {
         return ResponseEntity.ok(
                 ProductItemDto.from(productItemService.updateProductItem(provider.getUserVo(token).getId(), form)));
+    }
+
+    @DeleteMapping
+    public ResponseEntity<Void> deleteProduct(@RequestHeader("X-AUTH-TOKEN") String token,
+                                                    @RequestParam Long id) {
+        productService.deleteProduct(provider.getUserVo(token).getId(), id);
+        return ResponseEntity.ok().build();
+    }
+
+    @DeleteMapping("/item")
+    public ResponseEntity<Void> deleteProductItem(@RequestHeader("X-AUTH-TOKEN") String token,
+                                                            @RequestParam Long id) {
+        productItemService.deleteProductItem(provider.getUserVo(token).getId(), id);
+        return ResponseEntity.ok().build();
     }
 }
