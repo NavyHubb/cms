@@ -1,7 +1,7 @@
 ### 상품 추가
 POST http://localhost:8082/seller/product
 Content-Type: application/json
-X-AUTH-TOKEN: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ5NXEvaEs1bkwxbUdtVzZocnk2WFByQXphUVBGVHFES2dGRmhrcDdwb1owPSIsImp0aSI6IkNtWUR2NU1LNVlVeWlrOEtHTkR3b3c9PSIsInJvbGVzIjoiU0VMTEVSIiwiaWF0IjoxNjc5NzI4NzE4LCJleHAiOjE2Nzk4MTUxMTh9.q5IQnJ-FPZQ_AVmqmdb60vEZvq3xhz5GLUXVenwWxhQ
+X-AUTH-TOKEN: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ5NXEvaEs1bkwxbUdtVzZocnk2WFByQXphUVBGVHFES2dGRmhrcDdwb1owPSIsImp0aSI6IkNtWUR2NU1LNVlVeWlrOEtHTkR3b3c9PSIsInJvbGVzIjoiU0VMTEVSIiwiaWF0IjoxNjc5ODgyODU5LCJleHAiOjE2Nzk5NjkyNTl9.ow85cwUTko1FS5w18qNMwmZPAaWO0H1tf1aeePj286s
 
 {
   "description": "string",
@@ -25,4 +25,35 @@ X-AUTH-TOKEN: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ5NXEvaEs1bkwxbUdtVzZocnk2WFByQXphU
   "count": 1,
   "name": "item1",
   "price": 5000
+}
+
+### 상품 수정
+PUT http://localhost:8082/seller/product
+Content-Type: application/json
+X-AUTH-TOKEN: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ5NXEvaEs1bkwxbUdtVzZocnk2WFByQXphUVBGVHFES2dGRmhrcDdwb1owPSIsImp0aSI6IkNtWUR2NU1LNVlVeWlrOEtHTkR3b3c9PSIsInJvbGVzIjoiU0VMTEVSIiwiaWF0IjoxNjc5ODgyODU5LCJleHAiOjE2Nzk5NjkyNTl9.ow85cwUTko1FS5w18qNMwmZPAaWO0H1tf1aeePj286s
+
+{
+  "id": 1,
+  "name": "네이키 ㅋㅋㅋ",
+  "description": "string",
+  "items": [
+    {
+      "id": 1,
+      "name": "딈",
+      "price": 5000,
+      "count": 1
+    }
+  ]
+}
+
+### 상품 아이템 수정
+PUT http://localhost:8082/seller/product/item
+Content-Type: application/json
+X-AUTH-TOKEN: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ5NXEvaEs1bkwxbUdtVzZocnk2WFByQXphUVBGVHFES2dGRmhrcDdwb1owPSIsImp0aSI6IkNtWUR2NU1LNVlVeWlrOEtHTkR3b3c9PSIsInJvbGVzIjoiU0VMTEVSIiwiaWF0IjoxNjc5ODgyODU5LCJleHAiOjE2Nzk5NjkyNTl9.ow85cwUTko1FS5w18qNMwmZPAaWO0H1tf1aeePj286s
+
+{
+  "id": 1,
+  "name": "뇌이키",
+  "price": 6000,
+  "count": 1
 }
