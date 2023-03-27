@@ -31,7 +31,8 @@ public class Product extends BaseEntity{
     private String description;
 
     // ProductItem의 product 컬럼을 주인으로 설정
-    @OneToMany(mappedBy = "product", cascade = CascadeType.ALL)
+    @OneToMany(cascade = CascadeType.ALL)
+    @JoinColumn(name = "product_id")
     private List<ProductItem> productItems = new ArrayList<>();
 
     public static Product of(Long sellerId, AddProductForm form) {
