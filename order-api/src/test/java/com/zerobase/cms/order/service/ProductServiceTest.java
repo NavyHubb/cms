@@ -1,6 +1,5 @@
 package com.zerobase.cms.order.service;
 
-import com.zerobase.cms.order.ZeroOrderApplication;
 import com.zerobase.cms.order.domain.model.Product;
 import com.zerobase.cms.order.domain.product.AddProductForm;
 import com.zerobase.cms.order.domain.product.AddProductItemForm;
@@ -8,13 +7,13 @@ import com.zerobase.cms.order.domain.repository.ProductRepository;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.test.context.ContextConfiguration;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
 
 @SpringBootTest
 @Transactional
