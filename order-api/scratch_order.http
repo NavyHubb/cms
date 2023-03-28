@@ -1,37 +1,37 @@
 ### 상품 추가
 POST http://localhost:8082/seller/product
 Content-Type: application/json
-X-AUTH-TOKEN: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ5NXEvaEs1bkwxbUdtVzZocnk2WFByQXphUVBGVHFES2dGRmhrcDdwb1owPSIsImp0aSI6IkNtWUR2NU1LNVlVeWlrOEtHTkR3b3c9PSIsInJvbGVzIjoiU0VMTEVSIiwiaWF0IjoxNjc5ODgyODU5LCJleHAiOjE2Nzk5NjkyNTl9.ow85cwUTko1FS5w18qNMwmZPAaWO0H1tf1aeePj286s
+X-AUTH-TOKEN: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ5NXEvaEs1bkwxbUdtVzZocnk2WFByQXphUVBGVHFES2dGRmhrcDdwb1owPSIsImp0aSI6IkNtWUR2NU1LNVlVeWlrOEtHTkR3b3c9PSIsInJvbGVzIjoiU0VMTEVSIiwiaWF0IjoxNjc5OTc5NDEzLCJleHAiOjE2ODAwNjU4MTN9.927I0wY3MXI1wYh4WXUdpIDN6vTRjBFAL9JLP1KwQn0
 
 {
-  "description": "string",
+  "description": "hood",
   "items": [
     {
       "count": 5,
-      "name": "string",
+      "name": "hood1",
       "price": 5000
     }
   ],
-  "name": "adidas"
+  "name": "Nike"
 }
 
 ### 카트 추가
 POST http://localhost:8082/customer/cart
 Content-Type: application/json
-X-AUTH-TOKEN: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ5NXEvaEs1bkwxbUdtVzZocnk2WFByQXphUVBGVHFES2dGRmhrcDdwb1owPSIsImp0aSI6IkNtWUR2NU1LNVlVeWlrOEtHTkR3b3c9PSIsInJvbGVzIjoiU0VMTEVSIiwiaWF0IjoxNjc5ODgyODU5LCJleHAiOjE2Nzk5NjkyNTl9.ow85cwUTko1FS5w18qNMwmZPAaWO0H1tf1aeePj286s
+X-AUTH-TOKEN: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ5NXEvaEs1bkwxbUdtVzZocnk2WFByQXphUVBGVHFES2dGRmhrcDdwb1owPSIsImp0aSI6IlN1YkhlS1VSUnJlUVkrV1NPbkJrdGc9PSIsInJvbGVzIjoiQ1VTVE9NRVIiLCJpYXQiOjE2Nzk5ODQ0ODMsImV4cCI6MTY4MDA3MDg4M30.NQaIJupZAkj0nnRj-KP9FdxvogbULW0GA_R7cUyV17s
 
 {
-  "description": "string",
+  "description": "hood",
   "id": 1,
   "items": [
     {
-      "count": 10,
+      "count": 6,
       "id": 1,
-      "name": "string",
+      "name": "hood1",
       "price": 5000
     }
   ],
-  "name": "adidas",
+  "name": "Nike",
   "sellerId": 1
 }
 
