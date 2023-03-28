@@ -13,7 +13,7 @@ import java.util.List;
 @NoArgsConstructor
 @AllArgsConstructor
 public class AddProductCartForm {
-    private Long id;
+    private Long id;  // productId
     private Long sellerId;
     private String name;
     private String description;
