@@ -36,6 +36,7 @@ public class Cart {
         private Long sellerId;
         private String name;
         private String description;
+        @Builder.Default
         private List<ProductItem> items = new ArrayList<>();
 
         public static Product from(AddProductCartForm form) {

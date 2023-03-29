@@ -32,6 +32,7 @@ public class Seller extends BaseEntity {
 
     private LocalDateTime verifyExpiredAt;
     private String verificationCode;
+    @Builder.Default
     private boolean verify = false;
 
     public static Seller from(SignUpForm form) {
