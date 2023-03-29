@@ -6,7 +6,7 @@ Content-Type: application/json
   "birth": "1997-01-23",
   "email": "sj8504123@naver.com",
   "name": "Green",
-  "password": "string",
+  "password": "aaaaa33a!!",
   "phone": "010-4916-8503"
 }
 
@@ -49,7 +49,7 @@ Content-Type: application/json
   "birth": "1997-01-23",
   "email": "sj8504123@naver.com",
   "name": "Gang",
-  "password": "string",
+  "password": "string@@33",
   "phone": "010-1111-2222"
 }
 
