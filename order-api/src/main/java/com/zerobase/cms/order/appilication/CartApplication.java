@@ -73,7 +73,7 @@ public class CartApplication {
         cartService.putCart(customerId, null);
     }
 
-    private Cart refreshCart(Cart cart) {
+    protected Cart refreshCart(Cart cart) {
         // Product 혹은 ProductItem에 대한 정보가 변경되었는지 확인하고 그에 맞는 알람을 제공
 
 //        // Cart에 담겨있던 상품들
@@ -154,7 +154,7 @@ public class CartApplication {
                 cart.addMessage(sb.toString());
             }
         }
-        cartService.putCart(cart.getCustomerId(), cart);
+//        cartService.putCart(cart.getCustomerId(), cart);
         return cart;
     }
 

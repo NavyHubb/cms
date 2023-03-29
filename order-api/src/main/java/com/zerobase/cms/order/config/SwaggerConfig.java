@@ -1,4 +1,4 @@
-package com.zerobase.cms.user.config;
+package com.zerobase.cms.order.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -26,8 +26,8 @@ public class SwaggerConfig implements WebMvcConfigurer {
 
     private static ApiInfo apiInfo() {
         return new ApiInfoBuilder()
-                .title("회원관리")
-                .description("회원가입, 로그인, 회원정보 조회, 잔액변경")
+                .title("주문 관리")
+                .description("주문 관련 기능")
                 .version("1.0")
                 .build();
     }
