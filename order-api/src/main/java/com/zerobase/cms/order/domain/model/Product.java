@@ -33,7 +33,7 @@ public class Product extends BaseEntity{
     // ProductItem의 product 컬럼을 주인으로 설정
     @OneToMany(cascade = CascadeType.ALL)
     @JoinColumn(name = "product_id")
-//    @Builder.Default
+    @Builder.Default
     private List<ProductItem> productItems = new ArrayList<>();
 
     public static Product of(Long sellerId, AddProductForm form) {
