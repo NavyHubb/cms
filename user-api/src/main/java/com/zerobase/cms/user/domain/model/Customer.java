@@ -32,7 +32,7 @@ public class Customer extends BaseEntity {
     private boolean verify;
 
 //    @Column(columnDefinition = "int default 0")
-    private int balance;
+    private Integer balance;
 
 
     public static Customer from(SignUpForm form) {

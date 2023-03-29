@@ -35,7 +35,7 @@ public class SignUpApplication {
 
             String verificationCode = getRandomCode();
             SendMailForm sendMailForm = SendMailForm.builder()
-                    .from("tester@gmail.com")
+                    .from("tester@green.com")
                     .to(c.getEmail())
                     .subject("Verification Email")
                     .text(getVerificationEmailBody(c.getEmail(), c.getName(), "customer", verificationCode))
