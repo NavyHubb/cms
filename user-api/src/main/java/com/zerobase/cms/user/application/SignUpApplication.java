@@ -7,7 +7,7 @@ import com.zerobase.cms.user.domain.model.Seller;
 import com.zerobase.cms.user.exception.CustomException;
 import com.zerobase.cms.user.exception.ErrorCode;
 import com.zerobase.cms.user.mailgun.SendMailForm;
-import com.zerobase.cms.user.service.customer.SignupCustomerService;
+import com.zerobase.cms.user.service.customer.SignUpCustomerService;
 import com.zerobase.cms.user.service.seller.SignUpSellerService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -19,7 +19,7 @@ import org.springframework.stereotype.Service;
 @Slf4j
 public class SignUpApplication {
     private final MailgunClient mailgunClient;
-    private final SignupCustomerService signupCustomerService;
+    private final SignUpCustomerService signupCustomerService;
     private final SignUpSellerService signUpSellerService;
 
     public void customerVerify(String email, String code) {
@@ -63,7 +63,7 @@ public class SignUpApplication {
 
             String verificationCode = getRandomCode();
             SendMailForm sendMailForm = SendMailForm.builder()
-                    .from("tester@gmail.com")
+                    .from("tester@green.com")
                     .to(s.getEmail())
                     .subject("Verification Email")
                     .text(getVerificationEmailBody(s.getEmail(), s.getName(), "seller", verificationCode))
@@ -87,7 +87,7 @@ public class SignUpApplication {
     private String getVerificationEmailBody(String email, String name, String type, String code) {
         StringBuilder sb = new StringBuilder();
         return sb.append("Hello ").append(name).append("! Please Click Link for Verification.\n\n")
-                .append("http://localhost:8080/signUp/")
+                .append("http://localhost:8081/signUp/")
                 .append(type)
                 .append("/verify?")
                 .append("email=")

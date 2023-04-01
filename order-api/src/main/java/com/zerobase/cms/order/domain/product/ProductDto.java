@@ -1,7 +1,6 @@
 package com.zerobase.cms.order.domain.product;
 
 import com.zerobase.cms.order.domain.model.Product;
-import com.zerobase.cms.order.domain.model.ProductItem;
 import lombok.*;
 
 import java.util.List;

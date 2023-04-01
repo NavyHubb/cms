@@ -1,6 +1,5 @@
 package com.zerobase.cms.order.domain.product;
 
-import com.zerobase.cms.order.domain.redis.Cart;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;

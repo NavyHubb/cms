@@ -55,5 +55,4 @@ public class SignUpSellerService {
 
         seller.setVerify(true);
     }
-
 }

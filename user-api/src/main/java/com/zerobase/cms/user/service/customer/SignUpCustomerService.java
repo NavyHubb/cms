@@ -15,7 +15,7 @@ import java.util.Optional;
 
 @Service
 @RequiredArgsConstructor
-public class SignupCustomerService {
+public class SignUpCustomerService {
 
     private final CustomerRepository customerRepository;
 
