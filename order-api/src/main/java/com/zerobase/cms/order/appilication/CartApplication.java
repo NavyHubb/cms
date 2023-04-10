@@ -41,10 +41,10 @@ public class CartApplication {
         return cartService.addCart(customerId, form);
     }
 
-    public Cart putCart(Long customerId, Cart cart) {
-        cartService.putCart(customerId, cart);
-        return cart;
-    }
+//    public Cart putCart(Long customerId, Cart cart) {
+//        cartService.putCart(customerId, cart);
+//        return cart;
+//    }
 
     public Cart updateCart(Long customerId, Cart cart) {
         // 실질적으로 변하는 데이터

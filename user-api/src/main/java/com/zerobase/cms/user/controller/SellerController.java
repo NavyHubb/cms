@@ -1,13 +1,10 @@
 package com.zerobase.cms.user.controller;
 
-import com.zerobase.cms.user.domain.customer.CustomerDto;
-import com.zerobase.cms.user.domain.model.Customer;
 import com.zerobase.cms.user.domain.model.Seller;
 import com.zerobase.cms.user.domain.repository.SellerRepository;
 import com.zerobase.cms.user.domain.seller.SellerDto;
 import com.zerobase.cms.user.exception.CustomException;
 import com.zerobase.cms.user.exception.ErrorCode;
-import com.zerobase.cms.user.service.seller.SellerService;
 import com.zerobase.domain.common.UserVo;
 import com.zerobase.domain.config.JwtAuthenticationProvider;
 import lombok.RequiredArgsConstructor;
@@ -21,12 +18,14 @@ import org.springframework.web.bind.annotation.RestController;
 @RequiredArgsConstructor
 @RequestMapping("/seller")
 public class SellerController {
-    private final SellerService sellerService;
+
     private final SellerRepository sellerRepository;
     private final JwtAuthenticationProvider provider;
 
+    private final String TOKEN_NAME = "X-AUTH-TOKEN";
+
     @GetMapping("/getInfo")
-    public ResponseEntity<SellerDto> getInfo(@RequestHeader(name = "X-AUTH-TOKEN") String token) {
+    public ResponseEntity<SellerDto> getInfo(@RequestHeader(name = TOKEN_NAME) String token) {
         UserVo vo = provider.getUserVo(token);
         Seller s = sellerRepository.findByIdAndEmail(vo.getId(), vo.getEmail())
                 .orElseThrow(() -> new CustomException(ErrorCode.NOT_FOUND_USER));
